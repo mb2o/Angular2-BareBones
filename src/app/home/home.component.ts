@@ -6,17 +6,16 @@ import { DataService } from '../shared/data.service';
 @Component({
     selector: 'home',
     templateUrl: 'app/home/home.component.html',
-    directives: [ RouterLink ],
-    providers: [ DataService ]
+    directives: [RouterLink],
+    providers: [DataService]
 })
 export class HomeComponent implements OnInit {
-    
+
     projectName: string;
 
     constructor(private dataService: DataService) { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.projectName = this.dataService.getProjectName();
     }
-
 }

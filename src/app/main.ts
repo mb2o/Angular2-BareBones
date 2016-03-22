@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 
 //enableProdMode(); //Uncomment for production
 
-bootstrap(AppComponent, [ 
-    FORM_PROVIDERS, 
-    ROUTER_PROVIDERS, 
-    HTTP_PROVIDERS, 
+bootstrap(AppComponent, [
+    FORM_PROVIDERS,
+    ROUTER_PROVIDERS,
+    HTTP_PROVIDERS,
     bind(LocationStrategy).toClass(HashLocationStrategy)
 ]).then(
     success => console.log('AppComponent bootstrapped!'),
